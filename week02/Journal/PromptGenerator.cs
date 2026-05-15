@@ -1,24 +1,12 @@
-public class PromptGenerator
+public class Prompt
 {
-    public static Random _random = new Random();
-    List<string> _prompts = new List<string>
-    {
-        "What was the best part of your day?",
-        "What are you grateful for today?",
-        "Describe a challenge you faced and how you overcame it.",
-        "What is something new you learned today?",
-        "Write about a memorable moment from your day.",
-        "How did you make someone smile today?",
-        "What is a goal you have for tomorrow?",
-        "Reflect on a positive interaction you had with someone today.",
-        "What is something that made you laugh today?",
-        "Describe a moment when you felt proud of yourself today.",
-        "Describe one intrusive thought you had today."
-    };
+    public static Random _rand = new Random(); // Static so it's created only once (to prevent repeated prompts)
+    List<string> _prompts = new List<string> { "What are you grateful for today?", "Describe a challenge you recently overcame.", "In was ways could daily prayer contribute to your happiness and wellbeing?", "What new skills or habits would you like to learn?", "How did you see the hand of the Lord in your life today?", "What are some spiritual gifts that you have, and some that you'd like to gain?", "What does your ideal day look like?", "How do you handle stress?", "How can you show love and support to someone today?", "What is one intrusive thought that you had today?" };
 
-    public string GetRandomPrompt()
+    public string GeneratePrompt()
+    // Generates a random prompt from the _prompts list
     {
-       int index = _random.Next(_prompts.Count);
-       return _prompts[index]; 
+        int index = _rand.Next(_prompts.Count);
+        return _prompts[index];
     }
 }
