@@ -6,10 +6,10 @@ class Program
     {
         Console.Clear();
         Console.WriteLine("ORDER 1:\n");
-        Address address1 = new Address("12345 Gavin Rd", "El Paso", "Texas", "USA");
-        Customer customer1 = new Customer("Rosey Smith", address1);
-        Product p1 = new Product("Milk", 3001, 3.99, 2);
-        Product p2 = new Product("Cheese", 4003, 2.99, 1);
+        Address address1 = new Address("656", "Almost Hell", "Texas", "USA");
+        Customer customer1 = new Customer("Kevin the Imp", address1);
+        Product p1 = new Product("Suffering", 8520, 49.98, 2);
+        Product p2 = new Product("Flames of Torment", 6541, 132.99, 1);
         Order order1 = new Order(customer1);
         order1.AddProduct(p1);
         order1.AddProduct(p2);
@@ -24,11 +24,11 @@ class Program
         Console.WriteLine(new string('-', 40));
 
         Console.WriteLine("ORDER 2: \n");
-        Address address2 = new Address("2417 Burrard Ave", "Vanderhoof", "BC", "Canada");
-        Customer customer2 = new Customer("Jonathan Doeser", address2);
-        Product p3 = new Product("iPad", 6005, 799.99, 1);
-        Product p4 = new Product("iPhone", 6007, 1299.99, 1);
-        Product p5 = new Product("Airpods", 6009, 299.99, 1);
+        Address address2 = new Address("1234 Numerical Str.", "Flat Butte", "Nebrasska", "USA");
+        Customer customer2 = new Customer("Immature Charlie", address2);
+        Product p3 = new Product("Whoopie Cushion", 9009, 7.99, 100);
+        Product p4 = new Product("Glitter - 1 Pound", 59009, 8.99, 50);
+        Product p5 = new Product("Video Cameras", 6969, 1299.99, 1);
         Order order2 = new Order(customer2);
         order2.AddProduct(p3);
         order2.AddProduct(p4);
